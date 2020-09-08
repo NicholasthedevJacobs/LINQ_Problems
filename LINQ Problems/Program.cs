@@ -10,6 +10,12 @@ namespace LINQ_Problems
     {
         static void Main(string[] args)
         {
+            List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            var wordsThatContainTH = words.Where(w => w.Contains("th")); 
+            foreach(var word in wordsThatContainTH)
+            {
+                Console.WriteLine(words);
+            }
         }
     }
 }
