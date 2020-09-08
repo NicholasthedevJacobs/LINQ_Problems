@@ -43,8 +43,16 @@ namespace LINQ_Problems
             Skip(1)).SelectMany(c => c).Average();
 
             Console.WriteLine(listOfGrades);
-            Console.ReadLine();
+           
 
+            //FOURTH PROBLEM
+            var originalName= "Terrill".ToUpper();
+            var frequency = string.Join("", originalName.OrderBy(f => f).
+                Distinct().Select(f => $"{f}{originalName.Count(num => num == f)}"));
+
+            Console.WriteLine(frequency);
+            Console.ReadLine();
+            //mikeTerrill.Select(m => m.)
 
         }
     }
